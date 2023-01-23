@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+<TITLE>Holly Dykstra</TITLE>
+<META CHARSET="UTF-8">
+<META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<LINK REL="stylesheet" HREF="styles.css">
+<META PROPERTY="og:type" CONTENT="profile">
+<META PROPERTY="og:title" CONTENT="Holly Dykstra">
+<META PROPERTY="og:description" CONTENT="Dr. Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. She is a behavioral economist studying policy-relevant questions in individual decision-making, especially in intertemporal decision-making and household finance.">
+<META PROPERTY=og:url CONTENT="https://hollydykstra.github.io/">
+<META PROPERTY="og:image" CONTENT="https://hollydykstra.github.io/hd.jpg">
+<META NAME="description" CONTENT="Dr. Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. She is a behavioral economist studying policy-relevant questions in individual decision-making, especially in intertemporal decision-making and household finance.">
+<SCRIPT>
+	function steam() {
+		var elements = document.getElementsByClassName('steam');
+		console.log(elements);
+		for (var i = 0; i < elements.length; i = i+1) {
+			console.log('in loop');
+			console.log(elements[i]);
+			if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
+			else if(elements[i].innerHTML == '((') {elements[i].innerHTML = '  ))';}
+			else if(elements[i].innerHTML == ' ))') {elements[i].innerHTML = ' ((';}
+			
+			else if(elements[i].innerHTML == ' ))') {elements[i].innerHTML = ' ((';}
+			else if(elements[i].innerHTML == '  ))') {elements[i].innerHTML = '((';}
+			else if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
+		}
+	}
+	function delay(time) {
+	  return new Promise(resolve => setTimeout(resolve, time));
+	  console.log('delay 1 sec');
+	}
+</SCRIPT>
+</HEAD>
+<BODY>
+<PRE CLASS="hr">
+---------*---------*---------*---------*---------*---------*---------*---------*
+
+</PRE>
+<NAV>
+<A HREF="/">Home</A> | 
+<A HREF="about.html">About</A> | 
+<A HREF="research.html">Research</A> | 
+<A HREF="teaching.html">Teaching</A> 
+</NAV>
+<MAIN>
+<SECTION>
+<ARTICLE>
+<FIGURE CLASS="heading">
+<PRE ROLE="heading" ARIA-LABEL="Welcome!">
+ _     _
+' )   / 
+ / / /    
+(_(_/ elcome!
+----------------
+</PRE>
+</FIGURE>
+<H2>Holly Dykstra</H2> 
+Assistant Professor of Economics, <BR> 
+University of Konstanz
+<UL>
+<LI><A HREF="mailto:holly.dykstra@uni-konstanz.de">holly.dykstra@uni-konstanz.de</A>
+<LI><A HREF="https://www.wiwi.uni-konstanz.de/dykstra/team/jun-prof-holly-dykstra/">Faculty Website</A>
+</UL>
+</ARTICLE>
+</SECTION>
+<SECTION>
+<FIGURE CLASS="asciiart">
+<PRE ROLE="img" ARIA-LABEL="ASCII Macintosh" ONMOUSEOVER="steam();" ONMOUSEOUT="steam();">
+         ______________ 
+        /             /|
+       /   /-----/   / |
+      /____________ /  |
+     | ___________ |   |
+     ||           ||   |    <SPAN CLASS="steam"> ((</SPAN> 
+     ||   Hello.  ||   |    <SPAN CLASS="steam">  ))</SPAN> 
+     ||           ||   |    <SPAN CLASS="steam"> ))</SPAN> 
+     ||___________||   |    .--. _
+     |       ____  |  /`   |`--'|_)
+    /| o           | //    : hd :
+   ( |_____________|//      `--'
+    \ |||||||||||||.'__
+ .=================.   \
+ | ::::::::::::::: |    \__
+ | ::::::::::::[ ] |    |__|
+ |   ==========    |    |  |
+ `-----------------'    \__/
+</PRE>
+</FIGURE>
+</SECTION>
+</MAIN>
+<PRE CLASS="hr">
+
+---------*---------*---------*---------*---------*---------*---------*---------*
+</PRE>
+</BODY>
+</HTML>

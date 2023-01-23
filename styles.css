@@ -1,0 +1,192 @@
+@font-face {
+	font-family: "VictorMono";
+	src: url("/font/VictorMono-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family: "VictorMono";
+	src: url("/font/VictorMono-Italic.woff") format("woff");
+	font-style: italic;
+}
+
+@font-face {
+	font-family: "VictorMono";
+	src: url("/font/VictorMono-Bold.woff") format("woff");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "VictorMono";
+	src: url("/font/VictorMono-BoldItalic.woff") format("woff");
+	font-style: italic;
+	font-weight: bold;
+}
+
+html {
+	font-family: Courier, Menlo, Roboto, VictorMono, monospace;
+}
+
+body {
+	margin: 2rem auto;
+	width: 100%;
+	max-width: 80ch;
+	background-color: white;
+
+	scrollbar-width: none;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0px;
+}
+
+nav {
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+main {
+	display: flex;
+	flex-direction: row-reverse;
+	overflow: auto;
+	padding: 0;
+}
+
+section {
+	padding: 0 2ch;
+}
+
+section:first-of-type {
+	min-width: 45%;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+pre, xmp, plaintext, listing {
+	font-family: Menlo, Roboto, VictorMono, monospace;
+	margin: 0;
+	padding: 0;
+}
+
+pre[role=heading] {
+	margin-right: 2ch;
+	margin-bottom: 1em;
+}
+
+ul {
+	list-style-type: '> ';
+	padding-left: 2ch;
+}
+
+dl {
+	padding-left: 2ch;
+}
+
+dl dt {
+	display: list-item;
+	list-style-type: '> ';
+}
+
+a, a:link, a:active, a:visited {
+	color: black;
+}
+
+u {
+	cursor: pointer;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+details > summary {
+	list-style: none;
+}
+
+details[open] > summary {
+	margin-bottom: 1em;
+}
+
+details {
+	margin-bottom: 1em;
+}
+
+dl dt:not(first-of-type) {
+	margin-top: 1em;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+h1, h2 {
+	text-transform: uppercase;
+}
+
+h3, h4, h5, h6 {
+	font-style: italic;
+}
+
+#photo {
+	max-width: 100%;
+
+}
+
+.mobile_only {
+	display: none;
+}
+
+@media only screen and (max-width: 724px) {
+	body {
+		margin: 2rem auto;
+		max-width: 100%;
+	}
+	main {
+		flex-direction: column;
+	}
+	section {
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	section article {
+		display: inline-block;
+		text-align: left;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		text-align: center;
+	}
+	figure {
+		text-align: center;
+	}
+	figure > pre {
+		display: inline-block;
+		text-align: left;
+		margin: 1em 0;
+	}
+	pre.hr {
+		max-width: 100%;
+		overflow: hidden;
+	}
+	#photo {
+		max-width: none !important;
+		width: 100%;
+		float: none !important;
+	}
+	.mobile_only {
+		display: initial;
+	}
+	.no_mobile {
+		display: none;
+	}
+}
