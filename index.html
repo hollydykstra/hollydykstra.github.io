@@ -4,6 +4,7 @@
 <META CHARSET="UTF-8">
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
 <LINK REL="stylesheet" HREF="styles.css">
+<LINK REL="icon" HREF="img/favicon.ico">
 <SCRIPT data-goatcounter="https://hollydykstra.goatcounter.com/count" async src="//gc.zgo.at/count.js"></SCRIPT>
 <META PROPERTY="og:type" CONTENT="profile">
 <META PROPERTY="og:title" CONTENT="Holly Dykstra">
@@ -13,11 +14,9 @@
 <META NAME="description" CONTENT="Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. She is a behavioral economist studying policy-relevant questions in individual decision-making, especially in intertemporal decision-making and household finance.">
 <SCRIPT>
 	function steam() {
+		delay(1000);
 		var elements = document.getElementsByClassName('steam');
-		console.log(elements);
 		for (var i = 0; i < elements.length; i = i+1) {
-			console.log('in loop');
-			console.log(elements[i]);
 			if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
 			else if(elements[i].innerHTML == '((') {elements[i].innerHTML = '  ))';}
 			else if(elements[i].innerHTML == ' ))') {elements[i].innerHTML = ' ((';}
@@ -27,9 +26,8 @@
 			else if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
 		}
 	}
-	function delay(time) {
-	  return new Promise(resolve => setTimeout(resolve, time));
-	  console.log('delay 1 sec');
+	function delay(ms) {
+	  return new Promise(resolve => setTimeout(resolve, ms));
 	}
 </SCRIPT>
 </HEAD>
@@ -67,7 +65,7 @@ University of Konstanz
 </SECTION>
 <SECTION>
 <FIGURE CLASS="asciiart">
-<PRE ROLE="img" ARIA-LABEL="ASCII Macintosh" ONMOUSEOVER="steam();" ONMOUSEOUT="steam();">
+<PRE ROLE="img" ARIA-LABEL="ASCII Macintosh" ONMOUSEMOVE="steam();">
          ______________
         /             /|
        /   /-----/   / |
