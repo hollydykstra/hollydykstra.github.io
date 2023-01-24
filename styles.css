@@ -80,8 +80,17 @@ pre[role=heading] {
 }
 
 ul {
+	list-style-type: '* ';
+	padding-left: 2ch;
+}
+
+ul.accordion {
 	list-style-type: '> ';
 	padding-left: 2ch;
+}
+
+ul.accordion li:focus-within {
+	list-style-type: '∨ ' !important;
 }
 
 dl {
@@ -90,7 +99,12 @@ dl {
 
 dl dt {
 	display: list-item;
-	list-style-type: '> ';
+	list-style-type: '* ';
+}
+
+ul.nomarker, dl.nomarker, dl.nomarker dt {
+	list-style-type: none;
+	padding-left: 0;
 }
 
 a, a:link, a:active, a:visited {
@@ -106,24 +120,38 @@ figure {
 	padding: 0;
 }
 
-details > summary {
-	list-style: none;
+details {
+	margin-bottom: 1em;
+	padding-left: 2ch;
+	text-indent: -2ch;
+}
+
+details > *:not(summary) {
+	text-indent: 0;
 }
 
 details[open] > summary {
 	margin-bottom: 1em;
 }
 
-details {
-	margin-bottom: 1em;
-}
-
-dl dt:not(first-of-type) {
-	margin-top: 1em;
+details > summary {
+	list-style: none;
 }
 
 details > summary::-webkit-details-marker {
 	display: none;
+}
+
+details > summary::before {
+	content: '> ';
+}
+
+details[open] > summary::before {
+	content: '∨ ';
+}
+
+dl dt:not(first-of-type) {
+	margin-top: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
