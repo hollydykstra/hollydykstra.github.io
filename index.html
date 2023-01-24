@@ -27,6 +27,15 @@
 			else if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
 		}
 	}
+	function blink() {
+		delay(1000);
+		var elements = document.getElementsByClassName('blink');
+		for (var i = 0; i < elements.length; i = i+1) {
+			console.log(elements[i].innerHTML);
+			if(elements[i].innerHTML == 'o') {elements[i].innerHTML = '<FONT COLOR="lightgreen">o</FONT>';}
+			else if(elements[i].innerHTML.toLowerCase() == '<font color="lightgreen">o</font>') {elements[i].innerHTML = 'o';}
+		}
+	}
 	function delay(ms) {
 	  return new Promise(resolve => setTimeout(resolve, ms));
 	}
@@ -66,7 +75,7 @@ University of Konstanz
 </SECTION>
 <SECTION>
 <FIGURE CLASS="asciiart">
-<PRE ROLE="img" ARIA-LABEL="ASCII Macintosh" ONMOUSEMOVE="steam();">
+<PRE ROLE="img" ARIA-LABEL="ASCII Macintosh" ONMOUSEMOVE="steam();" ONMOUSEOVER="blink();" ONMOUSEOUT="blink();">
          ______________
         /             /|
        /   /-----/   / |
@@ -77,7 +86,7 @@ University of Konstanz
      ||           ||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam"> ))</SPAN></FONT>
      ||___________||   |    .--. _
      |       ____  |  /`   |`--'|_)
-    /| o           | //    : hd :
+    /| <SPAN CLASS="blink">o</SPAN>           | //    : hd :
    ( |_____________|//      `--'
     \ |||||||||||||.'__
  .=================.   \
