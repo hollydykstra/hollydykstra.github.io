@@ -1,5 +1,6 @@
 function steam() {
 	var elements = document.getElementsByClassName('steam');
+	var intervalId = setInterval(function() {
 	for (var i = 0; i < elements.length; i = i+1) {
 		if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
 		else if(elements[i].innerHTML == '((') {elements[i].innerHTML = '  ))';}
@@ -8,7 +9,7 @@ function steam() {
 		else if(elements[i].innerHTML == ' ))') {elements[i].innerHTML = ' ((';}
 		else if(elements[i].innerHTML == '  ))') {elements[i].innerHTML = '((';}
 		else if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
-	}
+	}}, 2000);
 }
 function blink() {
 	var elements = document.getElementsByClassName('blink');
