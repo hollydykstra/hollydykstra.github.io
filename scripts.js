@@ -44,7 +44,7 @@ function clearScreen(message = "World!") {
 }
 function type(message = "World!") {
 	if(!isScreenOn()){toggleScreen(); return;}
-	if(document.getElementById('message').innerHTML == message) { clearScreen(message); return;}
+	if(document.getElementById('message').innerHTML != '      ') { clearScreen(message); return;}
 	var intervalId = setInterval(function() {
 	if(document.getElementById('period').innerHTML == '.') {
 		document.getElementById('period').innerHTML = ' ';
