@@ -1,8 +1,9 @@
-<HTML>
+<!DOCTYPE html>
+<HTML LANG="en-US">
 <HEAD>
-<TITLE>Holly Dykstra</TITLE>
 <META CHARSET="UTF-8">
 <META NAME="viewport" CONTENT="width=device-width, initial-scale=1.0">
+<TITLE>Holly Dykstra</TITLE>
 <LINK REL="author" HREF="humans.txt">
 <LINK REL="stylesheet" HREF="styles.css">
 <LINK REL="icon" HREF="img/favicon.png">
@@ -13,32 +14,7 @@
 <META PROPERTY=og:url CONTENT="https://hollydykstra.github.io/">
 <META PROPERTY="og:image" CONTENT="https://hollydykstra.github.io/img/hd.jpg">
 <META NAME="description" CONTENT="Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. She is a behavioral economist studying policy-relevant questions in individual decision-making, especially in intertemporal decision-making and household finance.">
-<SCRIPT>
-	function steam() {
-		delay(1000);
-		var elements = document.getElementsByClassName('steam');
-		for (var i = 0; i < elements.length; i = i+1) {
-			if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
-			else if(elements[i].innerHTML == '((') {elements[i].innerHTML = '  ))';}
-			else if(elements[i].innerHTML == ' ))') {elements[i].innerHTML = ' ((';}
-
-			else if(elements[i].innerHTML == ' ))') {elements[i].innerHTML = ' ((';}
-			else if(elements[i].innerHTML == '  ))') {elements[i].innerHTML = '((';}
-			else if(elements[i].innerHTML == ' ((') {elements[i].innerHTML = ' ))';}
-		}
-	}
-	function blink() {
-		delay(1000);
-		var elements = document.getElementsByClassName('blink');
-		for (var i = 0; i < elements.length; i = i+1) {
-			if(elements[i].innerHTML == 'o') {elements[i].innerHTML = '<FONT COLOR="lightgreen">o</FONT>';}
-			else if(elements[i].innerHTML.toLowerCase() == '<font color="lightgreen">o</font>') {elements[i].innerHTML = 'o';}
-		}
-	}
-	function delay(ms) {
-	  return new Promise(resolve => setTimeout(resolve, ms));
-	}
-</SCRIPT>
+<SCRIPT SRC="scripts.js"></SCRIPT>
 </HEAD>
 <BODY>
 <PRE CLASS="hr">
@@ -80,19 +56,19 @@ University of Konstanz
        /   /-----/   / |
       /____________ /  |
      | ___________ |   |
-     ||           ||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam"> ((</SPAN></FONT>
-     ||   Hello.  ||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam">  ))</SPAN></FONT>
-     ||           ||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam"> ))</SPAN></FONT>
-     ||___________||   |    .--. _
+     ||<SPAN CLASS="screen">           </SPAN>||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam"> ((</SPAN></FONT>
+     ||<SPAN CLASS="screen">   Hello<SPAN ID="period">.</SPAN>  </SPAN>||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam">  ))</SPAN></FONT>
+     ||<SPAN CLASS="screen">   <SPAN ID="message">      </SPAN>  </SPAN>||   |    <FONT COLOR="lightgrey"><SPAN CLASS="steam"> ))</SPAN></FONT>
+     ||<SPAN CLASS="screen">___________</SPAN>||   |    .--. _
      |       ____  |  /`   |`--'|_)
-    /| <SPAN CLASS="blink">o</SPAN>           | //    : hd :
+    /| <SPAN CLASS="blink">•</SPAN>           | //    : hd :
    ( |_____________|//      `--'
     \ |||||||||||||.'__
- .=================.   \
- | ::::::::::::::: |    \__
- | ::::::::::::[ ] |    |__|
- |   ==========    |    |  |
- `-----------------'    \__/
+ <SPAN ONCLICK="type();">.=================.</SPAN>   \
+ <SPAN ONCLICK="type();">| ::::::::::::::: |</SPAN>    \__
+ <SPAN ONCLICK="type();">| ::::::::::::[ ] |</SPAN>    <SPAN ONCLICK="toggleScreen();">|__|</SPAN>
+ <SPAN ONCLICK="setInterval(type(),1000);">|   ==========    |</SPAN>    |  |
+ <SPAN ONCLICK="type();">`-----------------'</SPAN>    \__/
 </PRE>
 </FIGURE>
 </SECTION>
