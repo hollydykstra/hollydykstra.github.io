@@ -81,6 +81,8 @@ function toggleScreen() {
 			elements[i].style.backgroundColor = 'darkslategray';
 			elements[i].style.color = 'darkslategray';
 		}
+		document.getElementById('message').innerHTML = '      ';
+		document.getElementById('period').innerHTML = '.';
 		blink();
 	}
 }
