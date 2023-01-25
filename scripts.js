@@ -12,11 +12,9 @@ function steam() {
 	}}, 2000);
 }
 function blink() {
-	var elements = document.getElementsByClassName('light');
-	for (var i = 0; i < elements.length; i = i+1) {
-		if(elements[i].innerHTML == ' • ') {elements[i].innerHTML = '<FONT COLOR="lightgreen"> • </FONT>';}
-		else if(elements[i].innerHTML.toLowerCase() == '<font color="lightgreen"> • </font>') {elements[i].innerHTML = ' • ';}
-	}
+	var light = document.getElementById('light');
+	if(light.innerHTML == '•') {light.innerHTML = '<FONT COLOR="lightgreen">•</FONT>';}
+	else if(light.innerHTML.toLowerCase() == '<font color="lightgreen">•</font>') {light.innerHTML = '•';}
 }
 function clearScreen(message = "World!") {
 	if(document.getElementById('message').innerHTML == message) {
