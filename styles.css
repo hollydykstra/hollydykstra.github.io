@@ -167,9 +167,24 @@ h3, h4, h5, h6 {
 	font-style: italic;
 }
 
-#photo {
-	max-width: 100%;
+#photo img {
+	margin: 0 2ch 2ch 0;
+	max-width: 260px;
+	float: left;
+	filter: grayscale(1) contrast(2);
+}
 
+.dither {
+	width: 260px;
+	height: 173px;
+	pointer-events: none;
+	display: block;
+	position: absolute;
+	opacity: 40%;
+	z-index: 2;
+	background-image: url('img/bayer.png');
+	background-repeat: repeat;
+	filter: grayscale(1);
 }
 
 .screen {
