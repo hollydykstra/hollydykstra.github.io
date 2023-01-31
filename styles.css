@@ -48,7 +48,7 @@ nav {
 	margin-bottom: 2em;
 }
 
-main {
+article {
 	display: flex;
 	flex-direction: row-reverse;
 	overflow: auto;
@@ -201,7 +201,7 @@ h3, h4, h5, h6 {
 		margin: 2rem auto;
 		max-width: 100%;
 	}
-	main {
+	article {
 		flex-direction: column;
 	}
 	section {
