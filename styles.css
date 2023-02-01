@@ -206,7 +206,7 @@ h3, h4, h5, h6 {
 	}
 	section {
 		margin-bottom: 1em;
-		text-align: center;
+		text-align: left;
 	}
 	section article {
 		display: inline-block;
@@ -227,10 +227,22 @@ h3, h4, h5, h6 {
 		max-width: 100%;
 		overflow: hidden;
 	}
-	#photo {
+	#photo img {
 		max-width: none !important;
 		width: 100%;
 		float: none !important;
+	}
+	.dither {
+		width: 90%;
+		height: 33.5%;
+		pointer-events: none;
+		display: block;
+		position: absolute;
+		opacity: 40%;
+		z-index: 2;
+		background-image: url('img/bayer.png');
+		background-repeat: repeat;
+		filter: grayscale(1);
 	}
 	.mobile_only {
 		display: initial;
