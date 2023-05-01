@@ -76,7 +76,7 @@ pre, xmp, plaintext, listing {
 
 pre[role=heading] {
 	margin-right: 2ch;
-	margin-left: 3ch;
+	/* margin-left: 3ch; */
 	margin-bottom: 1em;
 }
 
@@ -194,6 +194,10 @@ figure#photo img {
 	background-repeat: repeat;
 	filter: grayscale(1);
 	pointer-events: none;
+}
+
+U {
+	background-color: lightgrey;
 }
 
 .screen {
