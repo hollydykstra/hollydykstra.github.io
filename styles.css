@@ -1,272 +1,64 @@
-@font-face {
-	font-family: "VictorMono";
-	src: url("/font/VictorMono-Regular.woff") format("woff");
-}
-
-@font-face {
-	font-family: "VictorMono";
-	src: url("/font/VictorMono-Italic.woff") format("woff");
-	font-style: italic;
-}
-
-@font-face {
-	font-family: "VictorMono";
-	src: url("/font/VictorMono-Bold.woff") format("woff");
-	font-weight: bold;
-}
-
-@font-face {
-	font-family: "VictorMono";
-	src: url("/font/VictorMono-BoldItalic.woff") format("woff");
-	font-style: italic;
-	font-weight: bold;
-}
-
-html {
-	font-family: Courier, Menlo, Roboto, VictorMono, monospace;
-}
-
 body {
-	margin: 2rem auto;
-	width: 100%;
-	max-width: 80ch;
-	background-color: white;
-	image-rendering: optimizeQuality;
+	line-height: 1.5;
+	padding: 4em 1em;
+	max-width:800px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:1.03em;
+	font-family:"Helvetica", "Arial", sans-serif;
+}
+body > p:first-of-type {margin-top: 8em;}
 
-	scrollbar-width: none;
-	-ms-overflow-style: -ms-autohiding-scrollbar;
+hr {
+	margin-top: 3em;
+	margin-bottom: 3em;
 }
 
-body::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 0px;
+img#photo {
+	float: right;
+	width: 325px;
+	margin: 3em 0 3em 3em;
 }
 
-nav {
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 2em;
+h1 {font-size: xx-large;}
+h2 {font-size: x-large; margin-bottom: 1em;}
+h3 {font-size: large;}
+
+a {text-decoration: none;}
+a:visited {color: #0E547F;}
+a:link {color: #0E547F;}
+span.title {color: #0E547F;}
+a:hover, span.title:hover {text-decoration: underline;}
+
+details, dl {margin-left: 2em;}
+
+footer {font-size: small;}
+
+details, details summary {
+	list-style: disc inside;
 }
 
-article {
-	display: flex;
-	flex-direction: row-reverse;
-	overflow: auto;
-	padding: 0;
+details summary::-webkit-details-marker {
+	display: initial;
 }
 
-section {
-	padding: 0 2ch;
-}
-
-section:first-of-type {
-	min-width: 45%;
-}
-
-figure {
-	margin: 0;
-	padding: 0;
-}
-
-pre, xmp, plaintext, listing {
-	font-family: Menlo, Roboto, VictorMono, monospace;
-	margin: 0;
-	padding: 0;
-}
-
-pre[role=heading] {
-	margin-right: 2ch;
-	/* margin-left: 3ch; */
-	margin-bottom: 1em;
-}
-
-ul {
-	list-style-type: '* ';
-	padding-left: 2ch;
-}
-
-ul.accordion {
-	list-style-type: '> ';
-	padding-left: 2ch;
-}
-
-ul.accordion li:focus-within {
-	list-style-type: '∨ ' !important;
-}
-
-dl {
-	padding-left: 2ch;
-}
-
-dl dt {
-	display: list-item;
-	list-style-type: '* ';
-}
-
-ul.nomarker, dl.nomarker, dl.nomarker dt {
-	list-style-type: none;
-	padding-left: 0;
-}
-
-a, a:link, a:active, a:visited {
-	color: black;
-}
-
-u {
+summary {
 	cursor: pointer;
 }
 
-figure {
-	margin: 0;
-	padding: 0;
-}
+#teaching > h4 {margin-left: 40px;}
+#teaching > dl {margin-left: 70px;}
 
-details {
-	margin-bottom: 1em;
-	padding-left: 2ch;
-	text-indent: -2ch;
-}
-
-details > *:not(summary) {
-	text-indent: 0;
-}
-
-details[open] > summary {
-	margin-bottom: 1em;
-}
-
-details > summary {
-	list-style: none;
-}
-
-details > summary::-webkit-details-marker {
-	display: none;
-}
-
-details > summary::before {
-	content: '> ';
-}
-
-details[open] > summary::before {
-	content: '∨ ';
-}
-
-dl dt:not(first-of-type) {
-	margin-top: 1em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	font-size: 1em;
-	font-weight: normal;
-}
-
-h1, h2 {
-	text-transform: uppercase;
-}
-
-h3, h4, h5, h6 {
-	font-style: italic;
-}
-
-figure#photo {
-	position: relative;
-	width: 100%;
-	float: left;
-	margin: 0 2ch 2ch 0;
-}
-
-figure#photo img {
-	width: 100%;
-	height: auto;
-	display: block;
-	filter: grayscale(1) contrast(2);
-}
-
-.dither {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0.4;
-	background-image: url('img/bayer.png');
-	background-repeat: repeat;
-	filter: grayscale(1);
-	pointer-events: none;
-}
-
-mark {
-	background-color: lightgrey;
-}
-
-.screen {
-	background-color: darkslategray;
-	color: darkslategray;
-}
-
-.mobile_only {
-	display: none;
-}
-
-@media only screen and (max-width: 724px) {
+@media only screen and (max-width: 800px) {
 	body {
-		margin: 2rem auto;
-		max-width: 100%;
+		padding: 1em 1em;
 	}
-	article {
-		flex-direction: column;
-	}
-	section {
-		margin-bottom: 1em;
-		text-align: left;
-	}
-	section article {
-		display: inline-block;
-		text-align: left;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		text-align: center;
-	}
-	figure {
-		text-align: center;
-		position: relative;
-		width: 100%
-	}
-	figure > pre {
-		display: inline-block;
-		text-align: left;
-		margin: 1em 0;
-	}
-	pre.hr {
-		max-width: 100%;
-		overflow: hidden;
-	}
-	figure#photo {
+
+	body > p:first-of-type {margin-top: 2em;}
+
+	img#photo {
+		float: none;
 		width: 100%;
-		max-width: none !important;
-		float: none !important;
-	}
-	figure#photo img {
-		display: block;
-		width: 100%;
-		height: auto;
-	}
-	.dither {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		opacity: 0.4;
-		background-image: url('img/bayer.png');
-		background-repeat: repeat;
-		filter: grayscale(1);
-		pointer-events: none;
-	}
-	.mobile_only {
-		display: initial;
-	}
-	.no_mobile {
-		display: none;
+		margin-top: 1em;
 	}
 }
