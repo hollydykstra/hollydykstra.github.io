@@ -16,13 +16,14 @@ hr {
 
 img#photo {
 	float: right;
-	width: 325px;
-	margin: 3em 0 3em 3em;
+	width: 400px;
+	margin: 5em 3em 1em 3em;
 }
 
 h1 {font-size: xx-large; margin-top: 3.8em; margin-bottom: 2mm;}
 h2 {font-size: x-large; margin-bottom: 1em;}
 h3 {font-size: large;}
+h4 {margin-bottom: 0;}
 
 a {text-decoration: none;}
 a:visited {color: #0E547F;}
@@ -30,7 +31,10 @@ a:link {color: #0E547F;}
 span.title {color: #0E547F;}
 a:hover, span.title:hover {text-decoration: underline;}
 
-details, dl {margin-left: 2em;}
+details, dl {
+	margin-left: 2em;
+	margin-top: 0;
+}
 
 footer {font-size: small;}
 
