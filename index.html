@@ -4,111 +4,238 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home | Holly Dykstra</title>
-	<link REL="stylesheet" href="/styles.css">
-	<link REL="icon" href="img/favicon.png">
-	<SCRIPT data-goatcounter="https://hollydykstra.goatcounter.com/count" async src="//gc.zgo.at/count.js"></SCRIPT>
+	<link rel="stylesheet" href="/styles.css">
+	<link rel="icon" href="img/favicon.png">
+	<script data-goatcounter="https://hollydykstra.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 	<script src="email-append.js" defer></script>
 	<meta property="og:type" content="profile">
 	<meta property="og:title" content="Holly Dykstra">
 	<meta property="og:description" content="Dr. Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. She is a behavioral and public economist studying how individuals make policy-relevant decisions, especially in household finance and for intertemporal choices.">
-	<meta property=og:url content="https://hollydykstra.github.io/">
+	<meta property="og:url" content="https://hollydykstra.github.io/">
 	<meta property="og:image" content="https://hollydykstra.github.io/img/hd.jpg">
 	<meta name="description" content="Dr. Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. She is a behavioral and public economist studying how individuals make policy-relevant decisions, especially in household finance and for intertemporal choices.">
+
+	<style>
+		/* Research section: Pattern A (inline techy link buttons + Abstract toggle) */
+
+		.paper { margin: 0 0 18px 0; }
+
+		/* One row: citation on left, buttons on right */
+		.paper-top {
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 12px;
+			flex-wrap: wrap; /* if the line is long, buttons drop below cleanly */
+		}
+
+		.paper-line { margin: 0; }
+		.title { font-weight: 600; }
+		.meta { margin-left: 6px; }
+
+		.paper-links {
+			display: inline-flex;
+			gap: 8px;
+			flex-wrap: wrap;
+		}
+
+		/* Techy square buttons */
+		.paper-links a {
+			display: inline-block;
+			padding: 2px 8px;
+			border: 1px solid #999;
+			border-radius: 2px;
+			text-decoration: none;
+			font-size: 0.92em;
+			font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+			letter-spacing: 0.2px;
+		}
+
+		.paper-links a:hover { border-color: #666; }
+
+		.paper-abstract summary {
+			cursor: pointer;
+			margin-top: 6px;
+			font-weight: 600;
+		}
+
+		.paper-abstract blockquote { margin: 10px 0 0 0; }
+	</style>
 </head>
+
 <body>
 
-<img id="photo" src="img/hd.jpg">
+<img id="photo" src="img/hd.jpg" alt="Holly Dykstra">
 <h1>Holly Dykstra</h1>
 <code><a class="email" href="holly.dykstra">holly.dykstra</a> <noscript>AT uni DASH konstanz DOT de</noscript></code><br>
-<code><a href="https://www.wiwi.uni-konstanz.de/dykstra/team/jun-prof-holly-dykstra/" target="_blank">Faculty website</a></code><br>
-<code><a href="doc/Dykstra_CV.pdf" target="_blank">CV</a></code>
+<code><a href="https://www.wiwi.uni-konstanz.de/dykstra/team/jun-prof-holly-dykstra/" target="_blank" rel="noopener noreferrer">Faculty website</a></code><br>
+<code><a href="doc/Dykstra_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></code>
+
 <p>
 Dr. Holly Dykstra is an Assistant Professor of Economics at the University of Konstanz. Her research studies how people navigate complex decisions and institutional settings using field and lab experiments, administrative records, and survey methods. She works in behavioral economics, public economics, and household finance.
+</p>
+
 <p>
-She is a research affiliate of the <a href="https://cepr.org" target="_blank">Centre for Economic Policy Research (CEPR)</a>, as well as a faculty affiliate of the <a href="https://starlab.wcfia.harvard.edu" target="_blank">Harvard University  STAR Lab</a> and the <a href="https://www.twi-kreuzlingen.ch" target="_blank">Thurgauer Wirtschaftsinstitut</a>. In her research, she often runs field experiments in cooperation with partner organizations. She has conducted research with the <a href="https://www.bi.team" target="_blank">Behavioral Insights Team</a>, the <a href="https://mayorsinnovation.org" target="_blank">Mayors Innovation Project</a>, a number of private companies, as well as city, state, and national government agencies in the U.S. and Europe.
+She is a research affiliate of the <a href="https://cepr.org/about/people/holly-dykstra" target="_blank" rel="noopener noreferrer">Centre for Economic Policy Research (CEPR)</a>, as well as a faculty affiliate of the <a href="https://starlab.wcfia.harvard.edu/people/holly-dykstra" target="_blank" rel="noopener noreferrer">Harvard University STAR Lab</a> and the <a href="https://www.twi-kreuzlingen.ch/team/holly-dykstra/" target="_blank" rel="noopener noreferrer">Thurgauer Wirtschaftsinstitut</a>. In her research, she often runs field experiments in cooperation with partner organizations. She has conducted research with the <a href="https://www.bi.team" target="_blank" rel="noopener noreferrer">Behavioral Insights Team</a>, the <a href="https://mayorsinnovation.org" target="_blank" rel="noopener noreferrer">Mayors Innovation Project</a>, a number of private companies, as well as city, state, and national government agencies in the U.S. and Europe.
+</p>
+
 <p>
 She holds a Ph.D. from Harvard University and a B.A. from Columbia University. Prior to graduate school, she worked at the U.S. Federal Reserve Board in Washington, D.C.
-<p>
+</p>
 
 <hr>
 
 <section id="research">
-<h2>Research</h2>
+	<h2>Research</h2>
 
-<h3>Working Papers</h3>
-	<details>
-		<summary><span class="title">The Buy-In Effect: When Increasing Initial Effort Motivates Follow-Through</span> (with Shibeal O'Flaherty and Ashley Whillans). R&R at <em>Management Science</em>.</summary>
-		<ul>
-			<li> <a href="doc/Buy-In_Effect.pdf" target="_blank">Manuscript [PDF]</a> </li>
-			<li> <a href="doc/Buy-In_Appendix.pdf" target="_blank">Appendix [PDF]</a> </li>
-		</ul>
-		<blockquote>
-			ABSTRACT: Behavioral interventions often focus on reducing friction to encourage behavior change. In contrast, we provide evidence that adding friction can promote behavior change when the target behavior requires follow-through. In collaboration with the Oregon Department of Transportation, we conducted a field experiment (<em>N</em> = 27,227) to test whether adding friction during an initial sign-up process for a new carpooling platform increases usage. Our results support this possibility: while a more effortful sign-up process led to a 25% decrease in sign-ups to the carpool platform, overall intensity of usage increased. Importantly, these results were only partly explained by selection effects: using an intention-to-treat analysis, participants who were randomly assigned to the more effortful sign-up process took 1.6 times more carpool trips per week over a four-month period as compared to those in the less effortful sign-up process. Of the 9,417 observed trips, the more effortful sign-up group took almost 800 more trips. To test generalizability and mechanisms, we conducted a second, pre-registered online experiment where participants completed transcription tasks and could sign up for a return opportunity the next day. Participants who were randomly assigned to a more effortful sign-up process were 37% more likely to return, and they completed more work overall. These results suggest that adding friction may be an overlooked strategy that could help promote behavior change, especially when follow-through, rather than initial uptake, is the primary goal.
-		</blockquote>
-	</details>
-		<details>
-			<summary><span class="title">Income-Based Rent and Earnings in Public Housing</span> (with Sofía Fernández-Guerrico)</summary>
-			<ul>
-				<li> <a href="doc/Dykstra_FernandezGuerrico_2025.pdf" target="_blank">Manuscript [PDF]</a> </li>
-			</ul>
+	<h3>Working Papers</h3>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">The Buy-In Effect: When Increasing Initial Effort Motivates Follow-Through</span>
+				<span class="meta">(with Shibeal O'Flaherty and Ashley Whillans). Revise and resubmit at <em>Management Science</em>.</span>
+			</div>
+			<div class="paper-links">
+				<a href="doc/Buy-In_Effect.pdf" target="_blank" rel="noopener noreferrer">Manuscript</a>
+				<a href="doc/Buy-In_Appendix.pdf" target="_blank" rel="noopener noreferrer">Appendix</a>
+			</div>
+		</div>
+
+		<details class="paper-abstract">
+			<summary>Abstract</summary>
 			<blockquote>
-				ABSTRACT: Income-based rents, common in public housing, create an earnings disincentive. We study a policy designed to counteract this effect by returning part of the rent induced by higher earnings to residents. Importantly, this policy was accompanied by behaviorally informed outreach to heads of household to make the changed payoff to working salient. Under automatic enrollment, we estimate that household-head earnings rose 17% ($1,370/year) and use of public assistance fell 7.5%. There is no evidence of spillover effects on non-household head earnings. Finally, we document a 6.4 percentage point increase in labor force participation among prior non-workers.
+				Behavioral interventions often focus on reducing friction to encourage behavior change. In contrast, we provide evidence that adding friction can promote behavior change when the target behavior requires follow-through. In collaboration with the Oregon Department of Transportation, we conducted a field experiment (<em>N</em> = 27,227) to test whether adding friction during an initial sign-up process for a new carpooling platform increases usage. Our results support this possibility: while a more effortful sign-up process led to a 25% decrease in sign-ups to the carpool platform, overall intensity of usage increased. Importantly, these results were only partly explained by selection effects: using an intention-to-treat analysis, participants who were randomly assigned to the more effortful sign-up process took 1.6 times more carpool trips per week over a four-month period as compared to those in the less effortful sign-up process. Of the 9,417 observed trips, the more effortful sign-up group took almost 800 more trips. To test generalizability and mechanisms, we conducted a second, pre-registered online experiment where participants completed transcription tasks and could sign up for a return opportunity the next day. Participants who were randomly assigned to a more effortful sign-up process were 37% more likely to return, and they completed more work overall. These results suggest that adding friction may be an overlooked strategy that could help promote behavior change, especially when follow-through, rather than initial uptake, is the primary goal.
 			</blockquote>
 		</details>
-	</section>
-	<details>
-		<summary><span class="title">When Decisions Require Consideration, People Give Up Control</span> (with Christine Exley, Muriel Niederle, and Heather Wong)</summary>
-			<ul>
-				<li> <a href="doc/DykstraExleyNiederleWong_Dec2025.pdf" target="_blank">Manuscript [PDF]</a> </li>
-				<li> <a href="doc/Appendix_DykstraExleyNiederleWong_Nov2025.pdf" target="_blank">Appendix [PDF]</a> </li>
-			</ul>
-		<blockquote>
-			ABSTRACT: Agents insist on agency for many reasons, including a desire to obtain their preferred choice and a desire for control. Agents may also forgo agency because they desire to avoid the costs of considering a decision. In a large experiment, we present decision-makers with a menu of investment options and investigate whether they insist on agency or let someone else choose for them. We find that requiring individuals to consider their choice makes them more willing to forgo agency. This consideration effect arises even among experienced decision-makers and across a range of decision-maker characteristics.  While we observe few differences in participants' willingness to forgo agency across demographic groups, people expect many differences to arise, including that women would be more willing to forgo agency than men. 			
-		</blockquote>
-	</details>
+	</div>
 
-<h3>Published</h3>
-	<details>
-		<summary><span class="title">Patience Across Payday: The Role of Scarcity in Commitment Decisions.</span> Forthcoming at <em>Journal of Political Economy Microeconomics</em>.</summary>
-		<ul>
-			<li> <a href="doc/Dykstra_Payday.pdf" target="_blank">Manuscript [PDF]</a> 
-			<li> <a href="doc/Dykstra_Payday_Appendix.pdf" target="_blank">Appendix [PDF]</a>
-		</ul>
-		<blockquote>
-			ABSTRACT: Individuals often behave impatiently when making financial decisions for the future. This paper proposes and tests that the timing of decisions relative to payday—which leads to temporary but recurring conditions of scarcity—influences their choice. In a large pre-registered experiment, I ask participants to adopt a commitment device that binds them to being patient. Participants who make this decision eight days before their payday, rather than one day after payday, are 34% more likely to take up commitment. This coincides with when individuals experience the most financial scarcity, and provides evidence that intertemporal decisions are affected by current psychological states.
-		</blockquote>
-	</details>
-	<details>
-		<summary><span class="title">Nudging the Commute: Using Behaviorally-Informed Interventions to Promote Sustainable Transportation</span> (with Michael Daly, Lyndsay Gavin, Shibeal O’Flaherty, Jessica Roberts, Joseph Sherlock, and Ashley Whillans) in <I>Behavioral Science & Policy</I>, 2021, 7(2), 27-49.</summary>
-		<ul>
-			<li> <a href="https://behavioralpolicy.org/wp-content/uploads/2022/03/BSP_Vol7Issue2_Whillans.pdf" target="_blank">Publication</a> <BR>
-		</ul>
-		<blockquote>
-			ABSTRACT: Dramatic reductions in carbon emissions must take place immediately. A human-centric method of reducing environmental impacts is to “nudge” people away from single-occupancy vehicles (SOVs) toward more sustainable commuting options. While an abundance of research has focused on external determinants of mode choice, we know much less about the behavioral determinants. The field of behavioral science is overdue for a focus on transportation. This paper is meant to facilitate communication between researchers, practitioners, and policymakers in part by developing a behaviorally-informed framework that can be leveraged by policymakers, government, and organizations worldwide. We also describe the founding of our multidisciplinary team and outline lessons learned.
-		</blockquote>
-	</details>
-<h3>Works in Progress</h3>
-	<details>
-		<summary><span class="title">Can’t Apply? Try Generative AI</span> (with Marie-Pascale Grimon)</summary>
-		<blockquote>
-			ABSTRACT: 60% of Americans eligible for unemployment benefits are not receiving them (Forsythe & Yang, 2021; BLS, 2023; Lachowska et al., 2025). Amid widespread low and differential take-up rates of social programs (Ko & Moffitt, 2022) and lack of new solutions to address this (DellaVigna & Linos, 2022; Linos et al., 2022), we design a tailored generative AI assistant to overcome the barriers workers face in applying for benefits. We assess its effectiveness in a series of pilots.
-		</blockquote>
-	</details>
-</section>
-	<details>
-		<summary><span class="title">Financial Behavior Across the Payday Cycle: Evidence from Transaction-Level Bank Data</span> (with Arna Olafsson)</summary>
-	</details>
-</section>
-	<details>
-		<summary><span class="title">Making Political Decisions about Future Public Policies</span> (with Christian Breunig and Wolfgang Gaissmaier)</summary>
-	</details>
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">Income-Based Rent and Earnings in Public Housing</span>
+				<span class="meta">(with Sofía Fernández-Guerrico)</span>
+			</div>
+			<div class="paper-links">
+				<a href="doc/Dykstra_FernandezGuerrico_2025.pdf" target="_blank" rel="noopener noreferrer">Manuscript</a>
+			</div>
+		</div>
+
+		<details class="paper-abstract">
+			<summary>Abstract</summary>
+			<blockquote>
+				Income-based rents, common in public housing, create an earnings disincentive. We study a policy designed to counteract this effect by returning part of the rent induced by higher earnings to residents. Importantly, this policy was accompanied by behaviorally informed outreach to heads of household to make the changed payoff to working salient. Under automatic enrollment, we estimate that household-head earnings rose 17% ($1,370/year) and use of public assistance fell 7.5%. There is no evidence of spillover effects on non-household head earnings. Finally, we document a 6.4 percentage point increase in labor force participation among prior non-workers.
+			</blockquote>
+		</details>
+	</div>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">When Decisions Require Consideration, People Give Up Control</span>
+				<span class="meta">(with Christine Exley, Muriel Niederle, and Heather Wong)</span>
+			</div>
+			<div class="paper-links">
+				<a href="doc/DykstraExleyNiederleWong_Dec2025.pdf" target="_blank" rel="noopener noreferrer">Manuscript</a>
+				<a href="https://cepr.org/system/files/publication-files/DP21005.pdf" target="_blank" rel="noopener noreferrer">CEPR DP 21005</a>
+				<a href="doc/Appendix_DykstraExleyNiederleWong_Nov2025.pdf" target="_blank" rel="noopener noreferrer">Appendix</a>
+			</div>
+		</div>
+
+		<details class="paper-abstract">
+			<summary>Abstract</summary>
+			<blockquote>
+				Agents insist on agency for many reasons, including a desire to obtain their preferred choice and a desire for control. Agents may also forgo agency because they desire to avoid the costs of considering a decision. In a large experiment, we present decision-makers with a menu of investment options and investigate whether they insist on agency or let someone else choose for them. We find that requiring individuals to consider their choice makes them more willing to forgo agency. This consideration effect arises even among experienced decision-makers and across a range of decision-maker characteristics. While we observe few differences in participants' willingness to forgo agency across demographic groups, people expect many differences to arise, including that women would be more willing to forgo agency than men.
+			</blockquote>
+		</details>
+	</div>
+
+	<h3>Published</h3>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">Patience Across Payday: The Role of Scarcity in Commitment Decisions.</span>
+				<span class="meta">Forthcoming at <em>Journal of Political Economy Microeconomics</em>.</span>
+			</div>
+			<div class="paper-links">
+				<a href="doc/Dykstra_Payday.pdf" target="_blank" rel="noopener noreferrer">Manuscript</a>
+				<a href="doc/Dykstra_Payday_Appendix.pdf" target="_blank" rel="noopener noreferrer">Appendix</a>
+			</div>
+		</div>
+
+		<details class="paper-abstract">
+			<summary>Abstract</summary>
+			<blockquote>
+				Individuals often behave impatiently when making financial decisions for the future. This paper proposes and tests that the timing of decisions relative to payday, which leads to temporary but recurring conditions of scarcity, influences their choice. In a large pre-registered experiment, I ask participants to adopt a commitment device that binds them to being patient. Participants who make this decision eight days before their payday, rather than one day after payday, are 34% more likely to take up commitment. This coincides with when individuals experience the most financial scarcity, and provides evidence that intertemporal decisions are affected by current psychological states.
+			</blockquote>
+		</details>
+	</div>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">Nudging the Commute: Using Behaviorally-Informed Interventions to Promote Sustainable Transportation</span>
+				<span class="meta">(with Michael Daly, Lyndsay Gavin, Shibeal O’Flaherty, Jessica Roberts, Joseph Sherlock, and Ashley Whillans) in <em>Behavioral Science and Policy</em>, 2021, 7(2), 27-49.</span>
+			</div>
+			<div class="paper-links">
+				<a href="https://behavioralpolicy.org/wp-content/uploads/2022/03/BSP_Vol7Issue2_Whillans.pdf" target="_blank" rel="noopener noreferrer">Publication</a>
+			</div>
+		</div>
+
+		<details class="paper-abstract">
+			<summary>Abstract</summary>
+			<blockquote>
+				Dramatic reductions in carbon emissions must take place immediately. A human-centric method of reducing environmental impacts is to “nudge” people away from single-occupancy vehicles (SOVs) toward more sustainable commuting options. While an abundance of research has focused on external determinants of mode choice, we know much less about the behavioral determinants. The field of behavioral science is overdue for a focus on transportation. This paper is meant to facilitate communication between researchers, practitioners, and policymakers in part by developing a behaviorally-informed framework that can be leveraged by policymakers, government, and organizations worldwide. We also describe the founding of our multidisciplinary team and outline lessons learned.
+			</blockquote>
+		</details>
+	</div>
+
+	<h3>Works in Progress</h3>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">Can’t Apply? Try Generative AI</span>
+				<span class="meta">(with Marie-Pascale Grimon)</span>
+			</div>
+			<div class="paper-links"></div>
+		</div>
+
+		<details class="paper-abstract">
+			<summary>Abstract</summary>
+			<blockquote>
+				60% of Americans eligible for unemployment benefits are not receiving them (Forsythe and Yang, 2021; BLS, 2023; Lachowska et al., 2025). Amid widespread low and differential take-up rates of social programs (Ko and Moffitt, 2022) and lack of new solutions to address this (DellaVigna and Linos, 2022; Linos et al., 2022), we design a tailored generative AI assistant to overcome the barriers workers face in applying for benefits. We assess its effectiveness in a series of pilots.
+			</blockquote>
+		</details>
+	</div>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">Financial Behavior Across the Payday Cycle: Evidence from Transaction-Level Bank Data</span>
+				<span class="meta">(with Arna Olafsson)</span>
+			</div>
+			<div class="paper-links"></div>
+		</div>
+	</div>
+
+	<div class="paper">
+		<div class="paper-top">
+			<div class="paper-line">
+				<span class="title">Making Political Decisions about Future Public Policies</span>
+				<span class="meta">(with Christian Breunig and Wolfgang Gaissmaier)</span>
+			</div>
+			<div class="paper-links"></div>
+		</div>
+	</div>
+
 </section>
 
 <hr>
 
 <footer>
-	© <script>document.write(new Date().getFullYear())</script> Holly Dykstra. Design adapted from <a href="https://tselilschramm.org/" target="_blank">Tselil Schramm</a> via <a href="https://math.mit.edu/~urschel/" target="_blank">John Urschel</a>.
-	
+	© <script>document.write(new Date().getFullYear())</script> Holly Dykstra. Design adapted from <a href="https://tselilschramm.org/" target="_blank" rel="noopener noreferrer">Tselil Schramm</a> via <a href="https://math.mit.edu/~urschel/" target="_blank" rel="noopener noreferrer">John Urschel</a>.
 </footer>
 
 </body>
