@@ -1,13 +1,14 @@
 body {
 	line-height: 1.5;
 	padding: 4em 1em;
-	max-width:800px;
-	margin-left:auto;
-	margin-right:auto;
-	font-size:1.03em;
-	font-family:"Helvetica", "Arial", sans-serif;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.03em;
+	font-family: "Helvetica", "Arial", sans-serif;
 }
-body > p:first-of-type {margin-top: 9em;}
+
+body > p:first-of-type { margin-top: 9em; }
 
 hr {
 	margin-top: 3em;
@@ -20,23 +21,26 @@ img#photo {
 	margin: 5em 3em 1em 3em;
 }
 
-h1 {font-size: xx-large; margin-top: 3.8em; margin-bottom: 2mm;}
-h2 {font-size: x-large; margin-bottom: 1em;}
-h3 {font-size: large;}
-h4 {margin-bottom: 0;}
+h1 { font-size: xx-large; margin-top: 3.8em; margin-bottom: 2mm; }
+h2 { font-size: x-large; margin-bottom: 1em; }
+h3 { font-size: large; }
+h4 { margin-bottom: 0; }
 
-a {text-decoration: none;}
-a:visited {color: #0E547F;}
-a:link {color: #0E547F;}
-span.title {color: #0E547F;}
-a:hover, span.title:hover {text-decoration: underline;}
+a { text-decoration: none; }
+a:visited { color: #0E547F; }
+a:link { color: #0E547F; }
+
+span.title { color: #0E547F; }
+
+a:hover { text-decoration: underline; }
+span.title:hover { text-decoration: none; }
 
 details, dl {
 	margin-left: 2em;
 	margin-top: 0;
 }
 
-footer {font-size: small;}
+footer { font-size: small; }
 
 details, details summary {
 	list-style: disc inside;
@@ -46,20 +50,78 @@ details summary::-webkit-details-marker {
 	display: initial;
 }
 
-summary {
-	cursor: pointer;
+summary { cursor: pointer; }
+
+#teaching > h4 { margin-left: 40px; }
+#teaching > dl { margin-left: 70px; }
+
+/* Research: paper list + [Manuscript]/[Appendix]/[Abstract] links with non-jumpy abstract toggle */
+.paper { margin: 0 0 18px 0; }
+
+.paper-line { margin: 0; }
+.meta { margin-left: 6px; }
+
+/* Keep titles looking like titles (not links) */
+.paper-line, .paper-line:hover { text-decoration: none; }
+.paper-line .title, .paper-line .title:hover { text-decoration: none; }
+
+/* Resource links row matches your top-of-page <code> links */
+code.paper-links {
+	margin-top: 4px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: baseline;
 }
 
-#teaching > h4 {margin-left: 40px;}
-#teaching > dl {margin-left: 70px;}
+code.paper-links a { text-decoration: none; }
+code.paper-links a:hover { text-decoration: underline; }
+
+/* Checkbox-driven abstract toggle (no layout jump for the [Abstract] control) */
+.abs-toggle {
+	position: absolute;
+	left: -9999px;
+}
+
+.abs-label {
+	cursor: pointer;
+	user-select: none;
+	display: inline-flex;
+	align-items: baseline;
+	gap: 4px;
+	text-decoration: none;
+	color: #0E547F;
+}
+
+.abs-label:hover { text-decoration: underline; }
+
+.abs-label .chev {
+	display: inline-block;
+	width: 1ch;
+	text-align: center;
+	opacity: 0.8;
+	line-height: 1;
+}
+
+.abs-label .chev::before {
+	content: "›";
+	display: inline-block;
+	transform-origin: center;
+	transition: transform 120ms ease;
+}
+
+.abs-toggle:checked ~ code.paper-links .abs-label .chev::before {
+	transform: rotate(90deg);
+}
+
+.abs-content { display: none; }
+.abs-toggle:checked ~ .abs-content { display: block; }
 
 @media only screen and (max-width: 800px) {
-	body {
-		padding: 1em 1em;
-	}
+	body { padding: 1em 1em; }
 
-	h1 {margin-top: 0.5em;}
-	body > p:first-of-type {margin-top: 2em;}
+	h1 { margin-top: 0.5em; }
+	body > p:first-of-type { margin-top: 2em; }
 
 	img#photo {
 		float: none;
